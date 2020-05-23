@@ -3,11 +3,11 @@
     <div class="container h-100">
         <div class="intro h-100">
           <div class="row h-100 justify-content-cneter align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-6 ml-3">
               <h3>Orders Page</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat tempore dolores maiores assumenda vel excepturi nesciunt voluptate dignissimos esse ullam.</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
               <img src="/images/svg/orders.svg" class="img-fluid" alt="">
             </div>
           </div>

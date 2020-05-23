@@ -14,15 +14,15 @@
                     </div>
                 </div>
                 <!-- sidebar-header  -->
-                <div class="sidebar-item sidebar-header d-flex flex-nowrap">
+                <div class="sidebar-item sidebar-header">
                     <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
+                        <img class="img-responsive img-rounded" src="/images/user.png" alt="User picture">
                     </div>
                     <div class="user-info">
                         <span class="user-name">Jhon
                             <strong>Smith</strong>
                         </span>
-                        <span class="user-role">Administrator</span>
+                        <span class="user-role">{{ email }}</span>
                         <span class="user-status">
                             <i class="fa fa-circle"></i>
                             <span>Online</span>
@@ -71,10 +71,10 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <router-link to="/admin/profile">
                                 <i class="fa fa-user"></i>
                                 <span>Profile</span>
-                            </a>
+                            </router-link>
                         </li>
 
                         <li>
@@ -106,6 +106,12 @@ import {fireb} from '../firebase';
 
 export default {
   name: 'admin',
+  data(){
+      return{
+          name: null,
+          email: null,
+      }
+  },
   components: {
     Hero,
   },
@@ -122,6 +128,11 @@ export default {
             console.log(err);
         })
     }
+  },
+
+  created(){
+      var user = fireb.auth().currentUser;
+      this.email = user.email;
   },
 }
 </script>
