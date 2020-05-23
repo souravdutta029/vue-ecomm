@@ -2,7 +2,7 @@
   <div class="home">
     <Navbar></Navbar>
     <Hero></Hero>
-    <Products></Products>
+    <products-list></products-list>
 
       <!-- Learn More About Us -->
       <div class="container h-100">
@@ -33,7 +33,7 @@ import Login from "@/components/Login.vue";
 export default {
   name: 'Home',
   components: {
-    Hero, Products, Login
+    Hero, Products, Login,
   }
 }
 </script>
