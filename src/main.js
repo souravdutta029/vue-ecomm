@@ -38,7 +38,17 @@ const Toast = Swal.mixin({
 window.Toast = Toast;
 
 Vue.component('Navbar', require('./components/Navbar.vue').default);
+Vue.component('add-to-cart', require('./components/AddToCart.vue').default);
+Vue.component('mini-cart', require('./components/MiniCart.vue').default);
 Vue.component('products-list', require('./sections/ProductList.vue').default);
+
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
+
+import Vue2Filters from 'vue2-filters';
+Vue.use(Vue2Filters);
+
+import store from './store.js';
 
 
 Vue.config.productionTip = false;
@@ -49,6 +59,7 @@ fireb.auth().onAuthStateChanged(function(user) {
   if(!app){
     new Vue({
       router,
+      store,
       render: h => h(App)
     }).$mount('#app')
   }

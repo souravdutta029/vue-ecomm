@@ -8,7 +8,7 @@
       <div class="container h-100">
           <div class="row p-5 h-100 justify-content-center align-items-center">
             <div class="col-md-6">
-              <img src="/images/svg/product.svg" alt="" width="400">
+              <img src="/images/svg/product.svg" alt="" width="350">
             </div>
             <div class="col-md-6">
               <h3>Learn More About us</h3>
@@ -21,6 +21,9 @@
       </div>
         <!-- Learn More About Us ends -->
         <login></login>
+
+        <mini-cart></mini-cart>
+        
   </div>
 </template>
 

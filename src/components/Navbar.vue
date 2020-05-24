@@ -1,8 +1,9 @@
 <template>
   <div class="hello">
     <!-- Navbar starts -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <router-link to="#" class="navbar-brand">Vue Ecommerce</router-link>
+    <nav class="navbar custom-nav fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <router-link to="#" class="navbar-brand">Vue Ecommerce</router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,16 +14,25 @@
             <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
+            <router-link to="/products" class="nav-link">Products</router-link>
+        </li>
+        <li class="nav-item">
             <router-link to="/about" class="nav-link">About</router-link>
+        </li>
+        <li class="nav-item">
+            <router-link to="/checkout" class="nav-link"><i class="fas fa-money-check-alt"></i>  Checkout</router-link>
         </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <a class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#login">Get Start</a>
+        <a class="btn btn-outline-info border-0 mx-2 my-2 my-sm-0" data-toggle="modal" data-target="#miniCart">
+              <i class="fas fa-cart-plus"></i>
+        </a>
         </form>
     </div>
-    
-</nav>
+      </div>
+    </nav>
     <!--Navbar ends-->
   </div>
 </template>
